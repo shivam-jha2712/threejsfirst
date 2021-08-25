@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 Basic Scene</title>
+</head>
+
+<body>
+    <canvas class="webgl"></canvas>
+    <script src="three.min.js"></script>
+    <!-- A thing to note is that you must keep your library in sync before the actual javascript is loaded -->
+    <script src="script.js"></script>
+    <!-- Add a script to the end of the body -->
+
+    <!-- How to acess the three js library ?? -->
+    <!-- Answer -  You need to mention "THREE" all caps in the javascript of the code in the console in order to acces the Three js library. -->
+
+    <!-- Syntax -  console.log(THREE) -->
+
+    <!-- Now in order to create a scene what we require is a 4 elements to get a scene visible:- 
+    1. A scene that contains objects
+    2. Some Objects 
+    3. A camera
+    4. A renderer -->
+
+    <!-- 1. What is the scene?
+    Answer -  A scene works 
+            * Like a container
+            * We put objects models and Lights etc. to it.
+            * At some point we ask Threejs to render the scene -->
+
+    <!-- What are we going to do is now create a scene in which it is a class by any name.
+    Syntax: const scene = new THREE.Scene();     
+    
+    Here .Scene is a class that is further going to contain objects on whhich the major work will be done-->
+
+    <!-- Now what are objects ???? -->
+    <!-- Objects can be many things:-
+        * Primitive Geometry objects
+        * Imported models
+        * Particles
+        * Lights
+        * Etc.
+        Lets build our simple Red Cube -->
+
+    <!-- From now on whwn ever we are going to create a visible object we are going to name this as a "mesh". -->
+
+    <!-- We need to create a Mesh
+
+    Combination of the geometry (The Shape) and a material (how is looks)
+
+    Starting with the "BoxGeometry" and a "MeshBasicMaterial" -->
+
+    <!-- For Geometry look in the script.js -->
+    <!-- For Material look in the script.js -->
+    <!-- For Mesh formations look in the script.js -->
+    <!-- Adding the Mesh formations look in the script.js -->
+
+
+    <!-- HEY!!! That was no help  the answer is yes it wasn't because the material whatsoever you have created is not visible because there is NO CAMERA. This is the reason why you are unable to see any of the things which you created on the screen. Now in order to get you things we need a Camera and look what it does -->
+
+    <!-- **CAMERA**
+    1. Not Visible 
+    2. Serve as a point of view for you to identify the scene for you.
+    3. Can have a multiple switches between them.
+    4. Diffrent Types of the cameras could be listed. 
+    5. We are going to use a "PerspectiveCamera"-->
+
+
+    <!-- For to how to add the camera Look in the script.js -->
+
+    <!-- **THE ASPECT RATIO**
+     -> The width of the render divided by the height of the render. 
+     -> We don't have a render yet, but we camn decide the size now. 
+     -> Create a "sizes" Object containing temporary values   -->
+    <!-- 
+     ** RENDERER **
+     Once we are set with the camera and the size of the scene the next thing that we are supposed to keep in mind is going to the renderer of the screen.
+
+     Now what is a renderer. In simple words it about making a complete scene from one cameras point of view.
+
+     1. Render the Scene from the Camera point of view
+     2. Results are drawn on the canvas.
+     3. A canvas is a HTML element in which you can draw stuff.
+     4. Three.js will use WebGL to draw the render inside this canvas.
+     5. You can create it or you can let Three.js to do the job for you. -->
+
+    <!-- 
+     Create the Canvas for your element to draw and rember the canvas is going to be on the top of Three.js library as the draw is supposed to be done befor the loading of the library -->
+
+    <!-- Refer to the top for canvas creation whic is an HTML element  -->
+
+    <!-- After the canvas section ans size sextion what we need to do is create our first ever render in three.js -->
+</body>
+
+</html>
